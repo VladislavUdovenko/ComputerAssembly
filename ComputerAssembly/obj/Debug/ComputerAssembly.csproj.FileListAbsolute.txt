@@ -1,0 +1,14 @@
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\bin\Debug\ComputerAssembly.exe.config
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\bin\Debug\ComputerAssembly.exe
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\bin\Debug\ComputerAssembly.pdb
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\obj\Debug\ComputerAssembly.csprojAssemblyReference.cache
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\obj\Debug\ComputerAssembly.Form1.resources
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\obj\Debug\ComputerAssembly.Properties.Resources.resources
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\obj\Debug\ComputerAssembly.csproj.GenerateResource.cache
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\obj\Debug\ComputerAssembly.csproj.CoreCompileInputs.cache
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\obj\Debug\ComputerAssembly.exe
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\obj\Debug\ComputerAssembly.pdb
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\obj\Debug\ComputerAssembly.csproj.CopyComplete
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\obj\Debug\ComputerAssembly.FormOrders.resources
+C:\Users\vladi\source\repos\ComputerAssembly\ComputerAssembly\obj\Debug\ComputerAssembly.FormСonfigurator.resources
