@@ -108,5 +108,20 @@
   <ItemGroup>
     <None Include="Resources\logoPNGKV.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoPNGKR250px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\domashniy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dorogoyIgr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nedorogoyIgr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\videomont.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

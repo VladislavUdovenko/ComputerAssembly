@@ -69,31 +69,27 @@ namespace ComputerAssembly
             iconCurrentForm.IconFont = IconFont.Auto;
             iconCurrentForm.Location = new Point(42, 32);
             iconCurrentForm.Size = new Size(32, 32);
-            //iconCurrentChildForm.TabStop = false;
             #endregion
             // Название текущего меню
             var lblTitleChildForm = new Label();
             lblTitleChildForm.AutoSize = true;
             lblTitleChildForm.ForeColor = Color.Gainsboro;
             lblTitleChildForm.Location = new Point(80, 32);
-            //lblTitleChildForm.Name = "lblTitleChildForm";
             lblTitleChildForm.Size = new Size(45, 17);
 
             OpenHomeForm(this, lblTitleChildForm, iconCurrentForm);
 
             var welcomeButton = CreateHomeScreenButton("ПК для ПК \n Подбор хороших комплектующих для ПК :)");
-            var welcomePicture = CreateWelcomeScreenIcon(panelDesktop.Width / 2 - 150, welcomeButton.Bottom, new Size(296, 294));
-            welcomePicture.Image = Properties.Resources.logoPNGKV;
+            var welcomePicture = CreateWelcomeScreenIcon(panelDesktop.Width / 2 - 150, welcomeButton.Bottom, new Size(250, 240));
+            welcomePicture.Image = Properties.Resources.logoPNGKR250px;
 
             // Логотип в верхнем левом углу
-            var logo = CreateLogo(new Point(0, 0), new Size(220, 211));
-            logo.Image = Properties.Resources.logoPNGKR;
+            var logo = CreateLogo(new Point(0, 0), new Size(220, 140));
             logo.Click += (sender, args) =>
             {
                 OpenHomeForm(this, lblTitleChildForm, iconCurrentForm);
                 welcomeButton.Visible = true;
                 welcomePicture.Visible = true;
-                //OpenHomePanel(panelDesktop, lblTitleChildForm, iconCurrentForm);
             };
 
             SizeChanged += (sender, args) =>
@@ -112,9 +108,7 @@ namespace ComputerAssembly
                 welcomeButton.Visible = false;
                 welcomePicture.Visible = false;
                 ActivateButton(sideMenuPanel, btnConstructor, btnOrders, panelIllumination, RGBColors.color1, iconCurrentForm);
-                //IlluminateButton(btnBasket, buttonIllumination, RGBColors.color3);
                 OpenChildForm(Сonfigurator, lblTitleChildForm, panelDesktop);
-                //Сonfigurator.HidePanel(Сonfigurator.BasketPanel);
             };
                         
             btnOrders.Click += (Button, Color) =>
@@ -160,7 +154,7 @@ namespace ComputerAssembly
         private PictureBox CreateWelcomeScreenIcon(int x, int y, Size size)
         {
             var pictureBox = new PictureBox();
-            pictureBox.BackColor = Color.FromArgb(26, 25, 62);
+            pictureBox.BackColor = Color.FromArgb(34, 33, 74);
             pictureBox.ForeColor = SystemColors.ControlText;
             pictureBox.Location = new Point(x, y);
             pictureBox.Name = "iconPictureBox1";
@@ -186,7 +180,6 @@ namespace ComputerAssembly
         private IconButton CreateButton(IconChar iconChar, string text, int bottom)
         {
             var button = new IconButton();
-            //button.Dock = DockStyle.Top;
             button.FlatAppearance.BorderSize = 0;
             button.FlatStyle = FlatStyle.Flat;
             button.Font = new Font("Microsoft Sans Serif", 10F);
@@ -197,10 +190,8 @@ namespace ComputerAssembly
             button.IconSize = 32;
             button.ImageAlign = ContentAlignment.MiddleLeft;
             button.Location = new Point(0, bottom);
-            //btnDashboard.Name = "btnDashboard";
             button.Padding = new Padding(10, 0, 20, 0);
             button.Size = new Size(220, 100);
-            //button.TabIndex = 1;
             button.Text = text;
             button.TextAlign = ContentAlignment.MiddleLeft;
             button.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -267,20 +258,10 @@ namespace ComputerAssembly
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
             panelDesktop.Controls.Add(childForm);
-            //panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
             lblTitleChildForm.Text = childForm.Text;
         }
-
-        //private void OpenHomePanel(Panel panel, Label lblTitleHomeForm, IconPictureBox iconCurrentForm)
-        //{
-        //    panel.BringToFront();
-        //    lblTitleHomeForm.Text = "Главный экран";
-        //    iconCurrentForm.IconChar = IconChar.Home;
-        //    iconCurrentForm.BackColor = Color.FromArgb(26, 25, 62);
-        //    iconCurrentForm.IconColor = Color.Blue;
-        //}
 
         private void OpenHomeForm(Form homeForm, Label lblTitleHomeForm, IconPictureBox iconCurrentForm)
         {
@@ -292,14 +273,6 @@ namespace ComputerAssembly
             iconCurrentForm.IconChar = IconChar.Home;
             iconCurrentForm.BackColor = Color.FromArgb(26, 25, 62);
             iconCurrentForm.IconColor = Color.Blue;
-            //homeForm.TopLevel = false;
-            //homeForm.FormBorderStyle = FormBorderStyle.None;
-            //homeForm.Dock = DockStyle.Fill;
-            ////panelDesktop.Controls.Add(homeForm);
-            ////panelDesktop.Tag = homeForm;
-            //homeForm.BringToFront();
-            //homeForm.Show();
-            //lblTitleHomeForm.Text = homeForm.Text;
         }
 
         private void DisableButton(IconButton btnOrders)
@@ -324,21 +297,20 @@ namespace ComputerAssembly
             }
         }
 
-        private PictureBox CreateLogo(Point location, Size size)
+        private IconPictureBox CreateLogo(Point location, Size size)
         {
-            var logo = new PictureBox();
-            logo.BackColor = Color.FromArgb(31, 30, 68); // !
-            logo.ForeColor = Color.FromArgb(24, 161, 251); // !
-            logo.Image = Properties.Resources.logoPNGKR;
-            //logo.IconChar = IconChar.Laptop; // !
-            //logo.IconColor = Color.FromArgb(24, 161, 251); // !
-            //logo.IconFont = IconFont.Auto;
-            //logo.IconSize = 103; // add
-            logo.Location = location; // !
-            //logo.Padding = new Padding(55, 0, 0, 0); // add
-            logo.Size = size; // !
+            var logo = new IconPictureBox();
+            logo.BackColor = Color.FromArgb(31, 30, 68);
+            logo.ForeColor = Color.FromArgb(24, 161, 251);
+            logo.IconChar = IconChar.Laptop;
+            logo.IconColor = Color.FromArgb(24, 161, 251);
+            logo.IconFont = IconFont.Auto;
+            logo.IconSize = 103;
+            logo.Location = location;
+            logo.Padding = new Padding(40, 0, 0, 0);
+            logo.Size = size;
             logo.TabStop = false;
-            return logo;            
+            return logo;
         }        
 
         private struct RGBColors

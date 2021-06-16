@@ -35,9 +35,6 @@ namespace ComputerAssembly
             var basketTable = new TableLayoutPanel();
             basketTable.Dock = DockStyle.Fill;
 
-            //var operatingFeeTable = new TableLayoutPanel();
-            //operatingFeeTable.Dock = DockStyle.Fill;
-
             #region Adding rows and columns to the components table
             componentTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 80));
             componentTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
@@ -56,15 +53,6 @@ namespace ComputerAssembly
             basketTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
             #endregion
 
-            //#region Adding rows and columns to the operating fee table
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    operatingFeeTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 55));
-            //    operatingFeeTable.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33F));
-            //}
-            //operatingFeeTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-            //#endregion
-
             #region Creating panels
             // Для конструктора
             var panelCPU = CreatePanel(DockStyle.Fill);
@@ -75,13 +63,6 @@ namespace ComputerAssembly
             var panelDataStore = CreatePanel(DockStyle.Fill);
             var panelSSD = CreatePanel(DockStyle.Fill);
             var panelPowerSupply = CreatePanel(DockStyle.Fill);
-
-            //var panelOperatingFee2x8gb = CreatePanel(DockStyle.Fill);
-            //panelOperatingFee2x8gb.BackColor = Color.Red;
-            //var panelOperatingFee2x4gb = CreatePanel(DockStyle.Fill);
-            //panelOperatingFee2x4gb.BackColor = Color.Red;
-            //var panelOperatingFee1x4gb = CreatePanel(DockStyle.Fill);
-            //panelOperatingFee1x4gb.BackColor = Color.Red;
 
             //Для панели корзины
             BasketPanel = CreatePanel(DockStyle.Left);
@@ -163,13 +144,13 @@ namespace ComputerAssembly
             var btnVideoCard1 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
                 "GTX 1060 \n 15000 рублей", BtnVideoCardInBasket, basketTable);
             var btnVideoCard2 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
-                "GTX 1660 \n 30000 рублей", BtnVideoCardInBasket, basketTable);
+                "GTX 1660 \n 20000 рублей", BtnVideoCardInBasket, basketTable);
             var btnVideoCard3 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
                 "RTX 2060 \n 30000 рублей", BtnVideoCardInBasket, basketTable);
             var btnVideoCard4 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
-                "RTX 3060 \n 40000 рублей", BtnVideoCardInBasket, basketTable);
+                "RTX 3060 \n 50000 рублей", BtnVideoCardInBasket, basketTable);
             var btnVideoCard5 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
-                "RTX 3080 \n 65000 рублей", BtnVideoCardInBasket, basketTable);
+                "RTX 3080 \n 75000 рублей", BtnVideoCardInBasket, basketTable);
 
             // Кнопки для выбора охлаждения:
             var btnCooling1 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
@@ -186,26 +167,6 @@ namespace ComputerAssembly
                 "2x4gb: Goodram IRDM X IR-X2666D464L16S/8G\n 4000 рублей", BtnOperatingFeeInBasket, basketTable);
             var btnOperatingFee3 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
                 "2x8gb: Goodram Iridium IR-X2666D464L16S/16G\n 7000 рублей", BtnOperatingFeeInBasket, basketTable);
-
-            //var btnThatOpensPanelOperatingFee2x8gb = CreateButton(SystemColors.Highlight, DockStyle.Top, "ОЗУ 2x8gb",
-            //   (sender, args) => ShowPanel(panelOperatingFee2x8gb), basketTable);
-            //var btnThatOpensPanelOperatingFee2x4gb = CreateButton(SystemColors.Highlight, DockStyle.Top, "ОЗУ 2x4gb",
-            //   (sender, args) => ShowPanel(panelOperatingFee2x4gb), basketTable);
-            //var btnThatOpensPanelOperatingFee1x4gb = CreateButton(SystemColors.Highlight, DockStyle.Top, "ОЗУ 1x4gb",
-            //   (sender, args) => ShowPanel(panelOperatingFee1x4gb), basketTable);
-
-            //var btnOperatingFee2x8gb1 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
-            //    "OperatingFee2x8gb1 \n 20000 рублей", BtnOperatingFeeInBasket, basketTable);
-            //var btnOperatingFee2x8gb2 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
-            //    "OperatingFee2x8gb2 \n 17000 рублей", BtnOperatingFeeInBasket, basketTable);
-
-            //var btnOperatingFee2x4gb1 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
-            //    "OperatingFee2x4gb1 \n 12000 рублей", BtnOperatingFeeInBasket, basketTable);
-            //var btnOperatingFee2x4gb2 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
-            //    "OperatingFee2x4gb2 \n 10000 рублей", BtnOperatingFeeInBasket, basketTable);
-
-            //var btnOperatingFee1x4gb1 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
-            //    "OperatingFee1x4gb1 \n 6000 рублей", BtnOperatingFeeInBasket, basketTable);
 
             // Кнопки для выбора хранилища данных:
             var btnDataStore1 = CreateComponentButton(SystemColors.Highlight, DockStyle.Top,
@@ -267,23 +228,6 @@ namespace ComputerAssembly
             basketTable.Controls.Add(BtnTotalPriceInBasket, 0, 10);
             #endregion
 
-            //#region Adding controls to the operating fee table
-            //operatingFeeTable.Controls.Add(btnThatOpensPanelOperatingFee2x8gb, 0, 0);
-            //operatingFeeTable.Controls.Add(panelOperatingFee2x8gb, 0, 1);
-            //operatingFeeTable.Controls.Add(btnThatOpensPanelOperatingFee2x4gb, 0, 2);
-            //operatingFeeTable.Controls.Add(panelOperatingFee2x4gb, 0, 3);
-            //operatingFeeTable.Controls.Add(btnThatOpensPanelOperatingFee1x4gb, 0, 4);
-            //operatingFeeTable.Controls.Add(panelOperatingFee1x4gb, 0, 5);
-
-            //panelOperatingFee1x4gb.Controls.Add(btnOperatingFee1x4gb1);
-
-            //panelOperatingFee2x4gb.Controls.Add(btnOperatingFee2x4gb2);
-            //panelOperatingFee2x4gb.Controls.Add(btnOperatingFee2x4gb1);
-
-            //panelOperatingFee2x8gb.Controls.Add(btnOperatingFee2x8gb2);
-            //panelOperatingFee2x8gb.Controls.Add(btnOperatingFee2x8gb1);
-            //#endregion
-
             #region Controls          
             // Контролы панели процессоров
             panelCPU.Controls.Add(btnCPU10);
@@ -319,18 +263,6 @@ namespace ComputerAssembly
             panelOperatingFee.Controls.Add(btnOperatingFee2);
             panelOperatingFee.Controls.Add(btnOperatingFee1);
 
-            //panelOperatingFee.Controls.Add(panelOperatingFee1x4gb);
-            //panelOperatingFee.Controls.Add(btnThatOpensPanelOperatingFee1x4gb);
-            //panelOperatingFee.Controls.Add(panelOperatingFee2x4gb);
-            //panelOperatingFee.Controls.Add(btnThatOpensPanelOperatingFee2x4gb);
-            //panelOperatingFee.Controls.Add(panelOperatingFee2x8gb);
-            //panelOperatingFee.Controls.Add(btnThatOpensPanelOperatingFee2x8gb);
-
-
-            //panelOperatingFee.Controls.Add(btnOperatingFee3);
-            //panelOperatingFee.Controls.Add(btnOperatingFee2);
-            //panelOperatingFee.Controls.Add(btnOperatingFee1);
-
             // Контролы панели хранилища данных
             panelDataStore.Controls.Add(btnDataStore2);
             panelDataStore.Controls.Add(btnDataStore1);
@@ -346,7 +278,6 @@ namespace ComputerAssembly
             panelPowerSupply.Controls.Add(btnPowerSupply1);
 
             BasketPanel.Controls.Add(basketTable);
-            //panelOperatingFee.Controls.Add(operatingFeeTable);
 
             Controls.Add(componentTable);
             Controls.Add(BasketPanel);
@@ -366,8 +297,7 @@ namespace ComputerAssembly
             return componentToBeAdded;
         }
 
-        private void RecalculateTotalCost(/*Button btnTotalPriceButton, Button btnVideoCardInBasket, Button btnCPUInBasket,*/
-            /*Button btnMotherboardInBasket, Button btnPowerSupplyInBasket, Button btnOperatingFeeInBasket, Button btnCoolingInBasket*/)
+        private void RecalculateTotalCost()
         {
             var totalPrice = 0;
 
@@ -383,32 +313,6 @@ namespace ComputerAssembly
             BtnTotalPriceInBasket.Text = String.Format("Итоговая стоимость: \n {0} рублей", totalPrice.ToString());
         }
 
-        //private void RecalculateTotalCost(TableLayoutPanel basketTable)
-        //{
-        //    Button btnTotalPrice = new Button();
-        //    var totalPrice = 0;
-        //    foreach (var component in basketTable.Controls)
-        //    {
-        //        if (!(component is Panel))
-        //        {
-        //            var button = component as Button;
-        //            if (button.Name == "btnTotalPriceButton")
-        //            {
-        //                btnTotalPrice = button;
-        //                continue;
-        //            }
-        //            else if (button.Name == "btnBasketHeader")
-        //                continue;
-        //            else
-        //            {
-        //                totalPrice += GetPrice(button);
-        //            }
-
-        //        }
-        //    }
-        //    btnTotalPrice.Text = String.Format("Итоговая стоимость: \n {0} рублей", totalPrice.ToString());
-        //}
-
         private int GetPrice(Button button)
         {
             var words = button.Text.Split(' ');
@@ -419,7 +323,7 @@ namespace ComputerAssembly
         {
             var button = new Button();
             button.FlatStyle = FlatStyle.Flat;
-            button.ForeColor = color;//SystemColors.Highlight;
+            button.ForeColor = color;
             button.Dock = dockStyle;
             button.Size = new Size(1, 70);
             button.Text = text;
@@ -430,7 +334,7 @@ namespace ComputerAssembly
             return button;
         }
 
-        private Panel CreatePanel(DockStyle dockStyle) //CreatePanelForSelectingComponents()
+        private Panel CreatePanel(DockStyle dockStyle)
         {
             var panel = new Panel()
             {

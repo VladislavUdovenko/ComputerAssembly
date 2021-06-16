@@ -63,6 +63,26 @@ namespace ComputerAssembly.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap domashniy {
+            get {
+                object obj = ResourceManager.GetObject("domashniy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dorogoyIgr {
+            get {
+                object obj = ResourceManager.GetObject("dorogoyIgr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoPNGKR {
             get {
                 object obj = ResourceManager.GetObject("logoPNGKR", resourceCulture);
@@ -73,9 +93,39 @@ namespace ComputerAssembly.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logoPNGKR250px {
+            get {
+                object obj = ResourceManager.GetObject("logoPNGKR250px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoPNGKV {
             get {
                 object obj = ResourceManager.GetObject("logoPNGKV", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nedorogoyIgr {
+            get {
+                object obj = ResourceManager.GetObject("nedorogoyIgr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap videomont {
+            get {
+                object obj = ResourceManager.GetObject("videomont", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
